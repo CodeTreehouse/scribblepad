@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/Scribble Pad/packages
+/Scribble Pad/.vs/Scribble Pad
+/Scribble Pad/Scirbble.Pad.UI.Demo/bin
+/Scribble Pad/Scirbble.Pad.UI.Demo/obj/Debug

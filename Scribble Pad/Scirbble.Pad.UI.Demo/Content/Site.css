@@ -29,3 +29,39 @@ textarea {
 canvas {
     border: 1px solid red;
 }
+
+
+
+.colourPicker {
+    height: 18px;
+    width: 18px;
+    display:block;
+}
+
+    .colourPicker.eraser {
+        border: solid 2px black;
+    }
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: green;
+}
+
+#red {
+    background-color: green;
+}
+
+#yellow {
+    background-color: green;
+}
+
+#orange {
+    background-color: green;
+}
+
+#black {
+    background-color: green;
+}

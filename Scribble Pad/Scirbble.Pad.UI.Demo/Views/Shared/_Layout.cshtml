@@ -1,55 +1,58 @@
-﻿<html>
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <link href="~/Content/Site.css" type="text/css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
 </head>
 <body onload="init()">
 
 
-    <p id="prevX"></p>
-    <p id="currX"></p>
-    <p id="prevY"></p>
-    <p id="currY"></p>
-    <p id="dotFlag"></p>
-
-
-
-
-    <canvas id="can" width="400" height="400" style="        position: absolute;
-        top: 10%;
-        left: 10%;
-        border: 2px solid;"></canvas>
-
-    <div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h4>
+                    Using the Canvas
+                </h4>
+            </div>
+            <div class="col-6">
+                <canvas id="can" width="400" height="400" class="scribble-canvas"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div style="">Choose Color</div>
+                <div class="colourPicker" id="green" onclick="color(this)"></div>
+                <div class="colourPicker" id="blue" onclick="color(this)"></div>
+                <div class="colourPicker" id="red" onclick="color(this)"></div>
+                <div class="colourPicker" id="yellow" onclick="color(this)"></div>
+                <div class="colourPicker" id="orange" onclick="color(this)"></div>
+                <div class="colourPicker" id="black" onclick="color(this)"></div>
+                <div class="colourPicker eraser" id="white" onclick="color(this)"></div>
+                <img id="canvasimg">
+            </div>
+        </div>
+        <div>
+            <div class="col">
+                <input type="button" value="save" id="btn" size="30" onclick="save()" />
+                <input type="button" value="clear" id="clr" size="23" onclick="erase()" />
+            </div>
+        </div>
     </div>
 
-    <div style="">Choose Color</div>
-    <div class="colourPicker" id="green" onclick="color(this)"></div>
-    <div class="colourPicker" id="blue" onclick="color(this)"></div>
-    <div class="colourPicker" id="red" onclick="color(this)"></div>
-    <div class="colourPicker" id="yellow" onclick="color(this)"></div>
-    <div class="colourPicker" id="orange" onclick="color(this)"></div>
-    <div class="colourPicker" id="black" onclick="color(this)"></div>
-    <div style="">Eraser</div>
-    <div class="colourPicker eraser" id="white" onclick="color(this)"></div>
-    <img id="canvasimg" style="position: absolute;
-        top: 10%;
-        left: 52%;">
-    <input type="button" value="save" id="btn" size="30" onclick="save()" style="        position: absolute;
-        top: 55%;
-        left: 10%;">
-    <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="        position: absolute;
-        top: 55%;
-        left: 15%;">
+
 
 
     @RenderBody()
 
-    <script type="text/javascript">
-
-    </script>
 
     <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/scribble-script.js"></script>
 
 

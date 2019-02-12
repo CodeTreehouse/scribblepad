@@ -26,16 +26,17 @@ textarea {
 
 
 
-canvas {
-    border: 1px solid red;
+.scribble-canvas {
+    border:solid 1px black;
 }
-
 
 
 .colourPicker {
     height: 18px;
     width: 18px;
-    display:block;
+    float:left;
+    margin:10px;
+
 }
 
     .colourPicker.eraser {
@@ -47,21 +48,21 @@ canvas {
 }
 
 #blue {
-    background-color: green;
+    background-color: blue;
 }
 
 #red {
-    background-color: green;
+    background-color: red;
 }
 
 #yellow {
-    background-color: green;
+    background-color: yellow;
 }
 
 #orange {
-    background-color: green;
+    background-color: orange;
 }
 
 #black {
-    background-color: green;
+    background-color: black;
 }

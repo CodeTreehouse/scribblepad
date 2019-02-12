@@ -1,4 +1,7 @@
-﻿var canvas, ctx, flag = false,
+﻿
+
+
+var canvas, ctx, flag = false,
     prevX = 0,
     currX = 0,
     prevY = 0,
@@ -86,8 +89,8 @@ function findxy(eventType, e) {
     if (eventType == 'down') {
         prevX = currX;
         prevY = currY;
-        currX = e.clientX - canvas.offsetLeft;
-        currY = e.clientY - canvas.offsetTop;
+        currX = e.layerX
+        currY = e.layerY;
         flag = true;
         dot_flag = true;
         if (dot_flag) {
@@ -105,17 +108,11 @@ function findxy(eventType, e) {
         if (flag) {
             prevX = currX;
             prevY = currY;
-            currX = e.clientX - canvas.offsetLeft;
-            currY = e.clientY - canvas.offsetTop;
+            currX = e.layerX;
+            currY = e.layerY;
             draw();
         }
     }
-
-    $("#prevX").html("PrevX " + prevX);
-    $("#currX").html("CurrentX " + currX);
-    $("#prevY").html("PrevY " + prevY);
-    $("#currY").html("CurrentY " + currY);
-    $("#dotFlag").html("DotFlag " + dot_flag);
 
 
 }
